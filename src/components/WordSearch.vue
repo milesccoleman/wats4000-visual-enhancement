@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="background">
     <div class="messages">
       <message-container v-bind:messages='messages'></message-container>
     </div>
@@ -71,7 +71,7 @@ export default {
         this.wordList.push(word);
         this.messages.push({
           type: 'success',
-          text: word + 'added to list',
+          text: word + ' added to list',
         });
       } else {
         console.log('Word is already on wordlist.');
@@ -112,21 +112,26 @@ export default {
 </script>
 
 <style scoped>
+#background {
+}
 .word-search {
   font-size: 1.2rem;
   white-space: nowrap;
   display: inline-block;
   width: 70%;
   float: left;
+  background-color: white;
 }
 .word-list-container {
   display: inline-block;
   width: 25%;
   background: #e8e8e8;
   padding: 0.5rem;
+  background-color: white;
 }
 .results-container {
   clear: both;
+  background-color: #3dedbb;
 }
 input[type="text"]{
   border-top: none;
@@ -180,7 +185,7 @@ ul.results, ul.word-list {
   margin: 5px 0;
   padding: 5px 0;
   border-bottom: 1px solid #333;
-}
+  }
 .results li {
   display: inline-block;
   margin: 10px;
@@ -191,7 +196,7 @@ ul.results, ul.word-list {
   color: #fff;
   font-weight: 300;
   font-size: 1.2rem;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.8);
 }
 ul.errors {
   list-style-type: none;
