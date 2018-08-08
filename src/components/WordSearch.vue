@@ -17,7 +17,7 @@
     <div class="word-list-container">
       <h2>Word List</h2>
       <ul class="word-list">
-      <transition-group name='fade' tag='div' appear'>
+      <transition-group name='fade' tag='div' appear>
           <li v-for="word in wordList" v-bind:key='word'>{{ word }}&nbsp;<button v-on:click="removeWord(word)" class="remove-word">x</button></li>
       </transition-group>
       </ul>
